@@ -25,7 +25,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM}/plugins/zsh-autosuggestions"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting"
+git clone https://github.com/z-shell/zsh-eza "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-eza"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM}/themes/powerlevel10k"
+
+echo "plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-eza)"
 
 cp "$HOME/.zshrc" "$HOME/.zshrc.backup"
 curl -fsSL "$ZSH_CONFIG_URL" -o "$HOME/.zshrc"
